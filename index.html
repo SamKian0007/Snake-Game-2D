@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeEscape</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #333;
+            background-color: #000;
+            margin-bottom: 20px;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 400px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .speed-control {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .speed-control label {
+            margin-right: 10px;
+        }
+        .speed-control input {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+        .high-score {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <div class="speed-control">
+            <label for="speedSlider">Game Speed:</label>
+            <input type="range" id="speedSlider" min="50" max="250" value="150" step="10">
+            <span id="speedValue">Normal</span>
+        </div>
+        <div class="high-score">High Score: <span id="highScoreValue">0</span></div>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <script src="game.js"></script>
+</body>
+</html> 
